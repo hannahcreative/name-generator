@@ -5,6 +5,11 @@
   <title>Name Generator</title>
 </head>
 <body>
+
+  <h1>Pet Name Generator</h1>
+  <p>The name of your pet will be <span class="insertNameHere">Sample Name</span></p>
+  
+
   <script>
   // 1) create 4 arrays 
   var name1 = ["King", "Mr.", "Doctor", "Uncle", "President" ];
@@ -12,39 +17,25 @@
   var name3 = ["Whiskers", "Paws", "Tails", "Meow", "Krispy"];
   var name4 = ["I", "II", "III", "IV", "V"];
 
-  // 2) create a function that pulls together an item from each of the four arrays
-  function getPetName(namesArray) {
-    return namesArray[Math.floor(Math.random() * namesArray.length)];
+  // 2) create a function that pulls together an item from each of the four arrays, it also needs to find the index of an item and then remove it, so that it doesn't get used more then once.
+  function getPetName(param) {
+    var chosenOne = param[Math.floor(Math.random() * param.length)];
+    var indexName = param.indexOf(chosenOne);
+    var thing = param.splice(indexName, 1);
+    return chosenOne;
   };
 
-  // 3) create 4 variables that are set to be a random item from each arrays inside function and console log from inside function  (or use jQuery )
+  // 3) create a string that concatintatesdjfhsjdkfh the four variables (write another function here)
 
-  // OPTION 1
-  // var random1 = getPetName(name1);
-  // var random2 = getPetName(name2);
-  // var random3 = getPetName(name3);
-  // var random4 = getPetName(name4);
-
-  // 4) create a string that concatintatesdjfhsjdkfh the four variables (write another function here)
-
-  // OPTION 1
-  // var sentence = "You will name your pet " + random1 + " " + random2 + " " + random3 + " " +random4;
-  // console.log(sentence);
-
-  // OPTION 2 (THE BETTER OPTION)
   function sentence() {
     return "You will name your pet " + getPetName(name1) + " " + getPetName(name2) + " " + getPetName(name3) + " " + getPetName(name4);
   }
 
   console.log(sentence());
-
-
-
-// will need to grab random item from array
-
-// keep data outside funcion and then reach in to grab it
-
-// once all is complete, at the end run function 5 times  
+  console.log(sentence());
+  console.log(sentence());
+  console.log(sentence());
+  console.log(sentence());
   
   </script>
 </body>
