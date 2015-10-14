@@ -8,8 +8,9 @@
 <body>
 
   <h1>Pet Name Generator</h1>
-  <p>The name of your pet will be <span class="insertNameHere">Sample Name</span></p>
+  <p><span class="insertNameHere"></span></p>
   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
   <script>
   // 1) create 4 arrays 
@@ -29,23 +30,18 @@
   // 3) create a string that concatintatesdjfhsjdkfh the four variables (write another function here)
 
   function sentence() {
-    return "You will name your pet " + getPetName(name1) + " " + getPetName(name2) + " " + getPetName(name3) + " " + getPetName(name4);
+    var sentence = "You will name your pet " + getPetName(name1) + " " + getPetName(name2) + " " + getPetName(name3) + " " + getPetName(name4);
+    return sentence;
   }
-
-  console.log(sentence());
-  console.log(sentence());
-  console.log(sentence());
-  console.log(sentence());
-  console.log(sentence());
 
   // 4) use jQuery to change the name in the HTML
   
-  $(function() {
-    $('.insertNameHere')   
+  $(document).ready(function() {
+    $('.insertNameHere').text(sentence()); 
+    //$('.insertNameHere').text('something');   
   });
   
 
-  
-  </script>
+     </script>
 </body>
 </html>
