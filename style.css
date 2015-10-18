@@ -1,4 +1,26 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
+  background-image: url('images/a.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+h1 {
+  font-size: 50px;
+}
+
+p {
+  font-size: 35px;
+}
+
+.block {
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 3%;
+  margin-top: 5em;
+}
+
+

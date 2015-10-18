@@ -2,46 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Name Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-  <h1>Pet Name Generator</h1>
-  <p><span class="insertNameHere"></span></p>
-  
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-  <script>
-  // 1) create 4 arrays 
-  var name1 = ["King", "Mr.", "Doctor", "Uncle", "President" ];
-  var name2 = ["Stan", "Morris", "Ruffs", "Capalouse", "Otis"];
-  var name3 = ["Whiskers", "Paws", "Tails", "Meow", "Krispy"];
-  var name4 = ["I", "II", "III", "IV", "V"];
-
-  // 2) create a function that pulls together an item from each of the four arrays, it also needs to find the index of an item and then remove it, so that it doesn't get used more then once.
-  function getPetName(param) {
-    var chosenOne = param[Math.floor(Math.random() * param.length)];
-    var indexName = param.indexOf(chosenOne);
-    var thing = param.splice(indexName, 1);
-    return chosenOne;
-  };
-
-  // 3) create a string that concatintatesdjfhsjdkfh the four variables (write another function here)
-
-  function sentence() {
-    var sentence = "You will name your pet " + getPetName(name1) + " " + getPetName(name2) + " " + getPetName(name3) + " " + getPetName(name4);
-    return sentence;
-  }
-
-  // 4) use jQuery to change the name in the HTML
-  
-  $(document).ready(function() {
-    $('.insertNameHere').text(sentence()); 
-    //$('.insertNameHere').text('something');   
-  });
-  
-
-     </script>
+  <div class="block">
+    <h1>Pet Name Generator</h1>
+    <p class="insertNameHere"></p>
+  </div>
+  <!-- incude JS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="scripts.js"></script> 
 </body>
 </html>
